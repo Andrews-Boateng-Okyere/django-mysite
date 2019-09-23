@@ -1,0 +1,21 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+<div class="row">
+    {% for tutty in tutorials %}
+        <div class="col s12 m6">
+            <div class="card blue-grey darken-1 hoverable">
+                <div class="card-content white-text">
+                    <span class="card-title">{{ tutty.title }}</span>
+                    <p style="font-size: 70%">{{ tutty.pubdate }}</p>
+                    <p>{{ tutty.content |safe }}</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">This is a link</a>
+                    <a href="#">This is a link</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
